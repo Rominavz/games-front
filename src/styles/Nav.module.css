@@ -1,0 +1,27 @@
+
+.nav {
+    align-items: center;
+    background-color: rgb(251, 251, 251, 0.1);
+/*     box-shadow: 0 2px 4px rgb(0 0 0 / 80%); */
+    box-shadow: 2px 2px 6px #00F8F6, -3px -3px 6px #33B0CF;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 5%;
+    position: relative;
+    top: 0;
+    width: 100%;
+    font-family:'Coda', cursive;
+}
+.navsub {
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: 0;
+    width:75%;
+    font-family: 'Coda', cursive;
+    color: #ffff;
+}
+

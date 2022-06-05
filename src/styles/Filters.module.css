@@ -1,0 +1,67 @@
+.filterBox {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    outline: none;
+    padding: 0.5rem;
+    /* border-radius: 0.5em; */
+   /*  box-shadow: 2px 1px 4px #c5c5c56b, -1px -2px 4px #ffffff8a; */
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-bottom: 1.5%;
+    font-family: "DM Serif Display", serif;
+    font-weight: lighter;
+  }
+  
+/*   .filterBox:hover {
+    box-shadow: 2px 1px 4px #c5c5c56b, -1px -2px 4px #ffffff8a;
+    
+  } */
+  
+  .btn {
+    color: #090909;
+    padding: 0.2em 1.2em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    cursor: pointer;
+    font-family: "DM Serif Display", serif;
+  }
+  
+  .btn:hover {
+    border: 1px solid #fff;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(37, 37, 37);
+  }
+  
+  select {
+    
+    text-align: center;
+    color: whitesmoke;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    outline: none;
+    /* font-family: inherit; */
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    background-color: rgba(155, 155, 155, 0.13);
+    border-radius: 0.2rem;
+    margin: 0 0.5rem;
+    font-family: 'Courier Prime', monospace;
+    /* font-weight:bold; */
+    font-size: 0.9em;
+    
+  }
+  option{
+   background-color:#3F4243
+  }

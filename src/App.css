@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loading {
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.loading > img {
+  width: 80%;
+  height: 50%;
+}
+
+button {
+  user-select: none;
+}
