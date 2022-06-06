@@ -10,16 +10,18 @@ export const Card = styled.div`
   h2 {
     color: var(--text-color);
   }
-  
+
 `;
 
 export const NoResult = styled.div`
 color: white;
-text-align: center;
- img {
-   width: 80%;
- }
-
+ text-align: center;
+ gap: 1rem;
+ font-family: 'Courier Prime', monospace;
+  img {
+    width: 65%;
+    padding-top: 2rem;
+  }
 `;
 export const ContainerHome = styled.div`
   padding: 0.75rem;
