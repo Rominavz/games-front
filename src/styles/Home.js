@@ -14,14 +14,12 @@ export const Card = styled.div`
 `;
 
 export const NoResult = styled.div`
-  border-radius: 1rem;
-  backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  img {
-    width: 100%;
-  }
+color: white;
+text-align: center;
+ img {
+   width: 80%;
+ }
+
 `;
 export const ContainerHome = styled.div`
   padding: 0.75rem;

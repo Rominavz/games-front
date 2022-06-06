@@ -65,18 +65,18 @@ export default function Games(){
                     />
                  )}
                 <Card>
-                    { games.length === 0 ? (
+                    { !currentGames.length ? (
                         <Loader /> ) : (
-                        games.length>0 && currentGames?.map((e,index) => (
-                            <Game
-                            key={index} id={e.id} name={e.name} image={e.image} genres={e.genres} rating={e.rating}
-                            />))
-                            ) || (
-                            <NoResult>
-                                <img src={noResults} alt="no Results" />
-                                <h2>No results found</h2>
-                            </NoResult> 
-                            )
+                        typeof currentGames === 'string'?
+                        <NoResult>
+                        <h4>Games Not Found</h4>
+                        <img src={noResults} alt="logo" />
+                        </NoResult> :
+                        currentGames?.map((e,index) => (
+                                <Game
+                                key={index} id={e.id} name={e.name} image={e.image} genres={e.genres} rating={e.rating}
+                                />
+                        )))
                     }
                 </Card>
                 <Paged gamesPerPage={gamesPerPage}/>
