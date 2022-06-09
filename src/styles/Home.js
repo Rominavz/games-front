@@ -25,7 +25,7 @@ color: white;
 `;
 export const ContainerHome = styled.div`
   padding: 0.75rem;
- /*  min-height: 100vh; */
+  min-height: 100vh;
   background-color:  #0D1112;
 
 `;
