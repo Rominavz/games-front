@@ -5,12 +5,23 @@ import { getGameById, cleanGameDetail } from "../redux/actions";
 import Loader from "./Loader";
 import styles from "../styles/Detail.module.css";
 import { MdHome } from "react-icons/md";
+import { useHistory } from "react-router-dom";
+import trash from "../assets/trash.png";
+import { Search, IconSearch } from "../styles/SearchBar";
 
 export default function Detail() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const { gameDetail } = useSelector((state) => state); 
-        
+    
+    const history = useHistory();
+
+    const handleDelete = () => {
+        dispatch(deleteGame(id));
+        alert('Game delete');
+        history.push("/home");
+    }
+
     useEffect(() => {
         dispatch(getGameById(id));
         return () => dispatch(cleanGameDetail());
@@ -42,6 +53,13 @@ export default function Detail() {
                                                         return <span className={styles.plat} key={plat}>{plat}</span>
                                             })}
                                             </p>
+                                            {gameDetail.createdInDb && 
+                                            <img
+                                            src={trash} width='40px'
+                                            alt="trash"
+                                            onClick={handleDelete}
+                                             />
+                                            }
                                     </div>
                                 </div>
                     

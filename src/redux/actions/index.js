@@ -9,6 +9,8 @@ import{
     FILTER_BY_GENRE,
     ORDER_GAMES,
     CREATE_GAME,
+    DELETE_GAME,
+    SET_LOADING
 } from '../actions/types';
 
 export const getAllGames = (name) =>{
@@ -88,4 +90,19 @@ export const createGame = (game) => {
         console.log(error);
         }
     };
+};
+export const deleteGame = (id) => {
+    return async (dispatch) =>{
+    try{
+        await axios.delete(`http://localhost:3001/delete/${id}`);
+            return dispatch ({
+                type: DELETE_GAME,
+            });
+        }catch(error) {
+        console.log(error);
+        }
+    };
+};
+export const setLoading = () => {
+    return { type: SET_LOADING };
 };

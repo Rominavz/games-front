@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 export const Search = styled.form`
   /* background-color: var(--text-color); */
   display: flex;
-  width: 150%;
+  width: 140%;
   align-items: center;
   padding: 0.3rem 0.5rem;
   margin: 1rem 0;
@@ -24,6 +24,9 @@ export const Search = styled.form`
     font-family: 'Courier Prime', monospace;
     background-color: #f1f1f120;
     color: white;
+  }
+  @media (max-width: 1000px) {
+    width: 75%;
   }
 `;
 export const IconSearch = styled(FaSearch)`

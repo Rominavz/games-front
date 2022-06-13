@@ -7,3 +7,5 @@ export const FILTER_BY_ORIGEN = "FILTER_BY_ORIGEN";
 export const FILTER_BY_GENRE= "FILTER_BY_GENRE";
 export const ORDER_GAMES = "ORDER_GAMES";
 export const CREATE_GAME = 'CREATE_GAME';
+export const DELETE_GAME = 'DELETE_GAME';
+export const SET_LOADING = "SET_LOADING";

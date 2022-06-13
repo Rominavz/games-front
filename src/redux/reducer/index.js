@@ -7,6 +7,8 @@ import{
     FILTER_BY_ORIGEN,
     FILTER_BY_GENRE,
     ORDER_GAMES,
+    DELETE_GAME,
+    SET_LOADING,
     
 } from '../actions/types'
 
@@ -16,6 +18,7 @@ const initialState = {
     gameDetail:[],
     allGenres:[],
     page:1,
+    loading: true,
 }
 
 
@@ -26,6 +29,12 @@ function rootReducer(state= initialState, {type, payload}){
                 ...state,
                 games: payload,
                 allGames: payload,  
+                loading: false,
+            };
+        case SET_LOADING:
+            return {
+                ...state,
+                loading: true,
             };
         case GET_GAME_BY_ID:
             return{
@@ -37,7 +46,10 @@ function rootReducer(state= initialState, {type, payload}){
                 ...state,
                 gameDetail:[],
             }; 
-        
+        case DELETE_GAME:
+            return{
+                ...state,
+            }; 
         case SET_CURRENT_PAGE:
             return{
                 ...state,

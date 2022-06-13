@@ -16,7 +16,7 @@ import { ConteinerBtn } from "../styles/Button";
 export default function Games(){
 
     const dispatch = useDispatch();
-    const { games, page, allGenres } = useSelector((state) =>state);
+    const { games, page, allGenres, loading } = useSelector((state) =>state);
     const [filters, setFilters] = useState(false);
     
     let gamesPerPage = 15;
@@ -65,7 +65,7 @@ export default function Games(){
                     />
                  )}
                 <Card>
-                    { !currentGames.length ? (
+                    { !currentGames.length || loading ? (
                         <Loader /> ) : (
                         typeof currentGames === 'string'?
                         <NoResult>
