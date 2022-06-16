@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllGames,getAllGenres, setCurrentPage, filterGameByOrigen, filterGameByGenre, orderGames } from '../redux/actions';
+import { getAllGames,getAllGenres, setCurrentPage, filterGameByOrigen, filterGameByGenre, filterGameByPlatforms, orderGames } from '../redux/actions';
 
 import Game from './Game';
 import Loader from './Loader';
@@ -18,6 +18,9 @@ export default function Games(){
     const dispatch = useDispatch();
     const { games, page, allGenres, loading } = useSelector((state) =>state);
     const [filters, setFilters] = useState(false);
+
+    const allPlatforms = allGames.map((e)=> e.platforms);
+    const allPlatformsf = [...new Set(allPlatforms.flat())].sort();
     
     let gamesPerPage = 15;
     const indexOfLastGame = page * gamesPerPage; 
@@ -41,6 +44,11 @@ export default function Games(){
         dispatch(setCurrentPage(1));
     };
 
+    const handleFilterPlatforms = (e) =>{
+        dispatch(filterGameByPlatforms(e.target.value));
+        dispatch(setCurrentPage(1));
+    };
+
     const handleOrdered = (e) => {
         dispatch(orderGames(e.target.value));
         dispatch(setCurrentPage(1));
@@ -60,6 +68,7 @@ export default function Games(){
                     <Filters
                     handleFilterOrigen={handleFilterOrigen}
                     handleFilterGenre={handleFilterGenre}
+                    handleFilterPlatforms={handleFilterPlatforms}
                     genres={allGenres}
                     handleOrdered={handleOrdered} 
                     />

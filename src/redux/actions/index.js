@@ -7,10 +7,11 @@ import{
     SET_CURRENT_PAGE,
     FILTER_BY_ORIGEN,
     FILTER_BY_GENRE,
+    FILTER_BY_PLATFORMS,
     ORDER_GAMES,
     CREATE_GAME,
     DELETE_GAME,
-    SET_LOADING
+    SET_LOADING,
 } from '../actions/types';
 
 export const getAllGames = (name) =>{
@@ -70,6 +71,12 @@ export const filterGameByOrigen = (payload) => {
 export const filterGameByGenre = (payload) => {
     return{
         type: FILTER_BY_GENRE,
+        payload,
+    }
+};
+export const filterGameByPlatforms = (payload) => {
+    return{
+        type: FILTER_BY_PLATFORMS,
         payload,
     }
 };

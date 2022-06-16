@@ -9,3 +9,4 @@ export const ORDER_GAMES = "ORDER_GAMES";
 export const CREATE_GAME = 'CREATE_GAME';
 export const DELETE_GAME = 'DELETE_GAME';
 export const SET_LOADING = "SET_LOADING";
+export const FILTER_BY_PLATFORMS= "FILTER_BY_PLATFORMS";

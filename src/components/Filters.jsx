@@ -3,6 +3,7 @@ import styles from "../styles/Filters.module.css";
 export default function Filters({
     handleFilterOrigen,
     handleFilterGenre,
+    handleFilterPlatforms,
     genres,
     handleOrdered,
 }) {
@@ -26,6 +27,17 @@ export default function Filters({
                 })}
             </select>   
             
+            <select onChange={handleFilterPlatforms}>
+                <option value='All'>Platforms</option>
+                {platforms?.map((p) => {
+                    return (
+                    <option key={p} value={p}>
+                        {p}
+                    </option>
+                );
+                })}
+            </select>  
+
             <select onChange={handleOrdered}>
                 <option hidden>Order</option>
                 <option value='Asc'>Name Asc.</option>

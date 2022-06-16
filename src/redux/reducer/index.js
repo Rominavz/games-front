@@ -6,6 +6,7 @@ import{
     GET_ALL_GENRES,
     FILTER_BY_ORIGEN,
     FILTER_BY_GENRE,
+    FILTER_BY_PLATFORMS,
     ORDER_GAMES,
     DELETE_GAME,
     SET_LOADING,
@@ -40,6 +41,7 @@ function rootReducer(state= initialState, {type, payload}){
             return{
                 ...state,
                 gameDetail: payload,
+                loading: false,
             }; 
         case CLEAN_GAME_DETAIL:
             return{
@@ -74,6 +76,13 @@ function rootReducer(state= initialState, {type, payload}){
                 ...state,
                 games: genresFilter,
             };
+        case FILTER_BY_PLATFORMS:
+            const allGamePlatforms = state.allGames;
+            const platformsFilter = payload === 'All' ? allGamePlatforms  : allGamePlatforms.filter(g => g.platforms?.includes(payload));
+            return{
+                ...state,
+                games: platformsFilter,
+            };
         case ORDER_GAMES:
             let ordered = state.games;
             payload === 'Asc' &&
@@ -97,11 +106,7 @@ function rootReducer(state= initialState, {type, payload}){
                 ...state,
                 games: ordered,
             }
-        /* case CREATE_GAME:
-            return{
-                ...state,
-            }; */
-
+    
     default: return state;
     } 
 }

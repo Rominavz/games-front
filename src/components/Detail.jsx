@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { getGameById, cleanGameDetail, deleteGame } from "../redux/actions";
+import { getGameById, cleanGameDetail, deleteGame, setLoading } from "../redux/actions";
 import Loader from "./Loader";
 import styles from "../styles/Detail.module.css";
 import { MdHome } from "react-icons/md";
@@ -20,6 +20,7 @@ export default function Detail() {
         dispatch(deleteGame(id));
         alert('Game delete');
         history.push("/home");
+        dispatch(setLoading());
     }
 
     useEffect(() => {
@@ -54,7 +55,7 @@ export default function Detail() {
                                             })}
                                             </p>
                                             {gameDetail.createdInDb && 
-                                            <img
+                                            <img className={styles.img}
                                             src={trash} width='40px'
                                             alt="trash"
                                             onClick={handleDelete}
