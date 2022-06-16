@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { createGame, getAllGames, getAllGenres, setLoading } from "../redux/actions";
+import { createGame, getAllGenres, setLoading } from "../redux/actions";
 import trash from "../assets/trash.png";
 
 import {
@@ -45,7 +45,7 @@ export default function Form() {
 
     useEffect(() => {
         dispatch(getAllGenres());
-        /* dispatch(getAllGames()); */
+       
       },[dispatch]);
 
     const handleOnChange = (e) => {
