@@ -16,7 +16,7 @@ import { ConteinerBtn } from "../styles/Button";
 export default function Games(){
 
     const dispatch = useDispatch();
-    const { games, page, allGenres, loading } = useSelector((state) =>state);
+    const { games, page, allGenres, loading, allGames } = useSelector((state) =>state);
     const [filters, setFilters] = useState(false);
 
     const allPlatforms = allGames.map((e)=> e.platforms);
