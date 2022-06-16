@@ -45,7 +45,7 @@ export default function Form() {
 
     useEffect(() => {
         dispatch(getAllGenres());
-        dispatch(getAllGames());
+        /* dispatch(getAllGames()); */
       },[dispatch]);
 
     const handleOnChange = (e) => {
