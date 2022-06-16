@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { getGameById, cleanGameDetail } from "../redux/actions";
+import { getGameById, cleanGameDetail, deleteGame } from "../redux/actions";
 import Loader from "./Loader";
 import styles from "../styles/Detail.module.css";
 import { MdHome } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 import trash from "../assets/trash.png";
-import { Search, IconSearch } from "../styles/SearchBar";
+
 
 export default function Detail() {
     const { id } = useParams();
