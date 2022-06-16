@@ -5,6 +5,7 @@ export default function Filters({
     handleFilterGenre,
     handleFilterPlatforms,
     genres,
+    platforms,
     handleOrdered,
 }) {
 

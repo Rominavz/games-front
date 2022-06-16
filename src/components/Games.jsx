@@ -70,6 +70,7 @@ export default function Games(){
                     handleFilterGenre={handleFilterGenre}
                     handleFilterPlatforms={handleFilterPlatforms}
                     genres={allGenres}
+                    platforms={allPlatformsf}
                     handleOrdered={handleOrdered} 
                     />
                  )}
