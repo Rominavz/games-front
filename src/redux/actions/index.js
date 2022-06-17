@@ -21,9 +21,12 @@ export const getAllGames = (name) =>{
             return dispatch({
             type: GET_ALL_GAMES, payload: response.data});
         })
-        .catch(error =>{
+       /*  .catch(error =>{
             alert('Sorry, Games not found')
-        })
+        }) */
+        .catch((error) => {
+            console.log(error);
+        });
     }
 }
 export const getGameById = (id) => {
