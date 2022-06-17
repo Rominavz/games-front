@@ -9,7 +9,7 @@ import{
     FILTER_BY_PLATFORMS,
     ORDER_GAMES,
     DELETE_GAME,
-    SET_LOADING,
+   /*  SET_LOADING, */
     
 } from '../actions/types'
 
@@ -19,7 +19,7 @@ const initialState = {
     gameDetail:[],
     allGenres:[],
     page:1,
-    loading: true,
+    /* loading: true, */
 }
 
 
@@ -30,18 +30,18 @@ function rootReducer(state= initialState, {type, payload}){
                 ...state,
                 games: payload,
                 allGames: payload,  
-                loading: false,
+               /*  loading: false, */
             };
-        case SET_LOADING:
+        /* case SET_LOADING:
             return {
                 ...state,
                 loading: true,
-            };
+            }; */
         case GET_GAME_BY_ID:
             return{
                 ...state,
                 gameDetail: payload,
-                loading: false,
+                /* loading: false, */
             }; 
         case CLEAN_GAME_DETAIL:
             return{

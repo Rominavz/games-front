@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { createGame, getAllGenres, setLoading } from "../redux/actions";
+import { createGame, getAllGenres, /* setLoading  */} from "../redux/actions";
 import trash from "../assets/trash.png";
 
 import {
@@ -131,7 +131,7 @@ export default function Form() {
             genres: [],
           });
           history.push("/home");
-          dispatch(setLoading());
+          /* dispatch(setLoading()); */
         } else {
           alert("Please complete the required fields or review the errors");
         }
