@@ -11,7 +11,7 @@ import{
     ORDER_GAMES,
     CREATE_GAME,
     DELETE_GAME,
-    /* SET_LOADING, */
+    SET_LOADING,
 } from '../actions/types';
 
 export const getAllGames = (name) =>{
@@ -110,6 +110,6 @@ export const deleteGame = (id) => {
         }
     };
 };
-/* export const setLoading = () => {
+export const setLoading = () => {
     return { type: SET_LOADING };
-}; */
+};
