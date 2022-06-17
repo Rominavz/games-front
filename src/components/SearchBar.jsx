@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Search, IconSearch } from "../styles/SearchBar";
-import { getAllGames, setCurrentPage, setLoading } from "../redux/actions";
+import { getAllGames, setCurrentPage,/*  setLoading  */} from "../redux/actions";
 
 export default function SearchBar() {
     const [search, setSearch] = useState("");
@@ -16,7 +16,7 @@ export default function SearchBar() {
         if (!search) {
           alert('Please enter a video games');
         } else {
-          dispatch(setLoading());
+          /* dispatch(setLoading()); */
           dispatch(getAllGames(search));
           dispatch(setCurrentPage(1));
           setSearch("");  
