@@ -7,9 +7,9 @@ export default function Game({id, name, image, genres, rating}){
         <GameContainer>
             <Details to={`/home/detail/${id}`}> 
                 <div>
-                    <img src={image} alt='flag not found'/>
+                    <img loading='lazy'src={image} alt='flag not found'/>
                     <Info>
-                    <Icono><img src={mario} alt='flag not found'/></Icono> 
+                    <Icono><img loading='lazy' src={mario} alt='flag not found'/></Icono> 
                         <Bkg>
                         <h3>{name}</h3>
                         <p> Genres</p> 

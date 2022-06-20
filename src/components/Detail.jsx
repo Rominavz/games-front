@@ -39,7 +39,7 @@ export default function Detail() {
                     <Loader /> ) : (
                                 <div>
                                     <div className={styles.gameBack}>
-                                        <img src={gameDetail.image} width="1530px" alt=''/>
+                                        <img loading='lazy' src={gameDetail.image} width="1530px" alt=''/>
                                     </div>
                                     <div className={styles.info}>
                                             <h1>{gameDetail.name}</h1>

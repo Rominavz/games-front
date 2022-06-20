@@ -9,7 +9,7 @@ export default function NavBar(){
         
             <div className={styles.nav}>
                 <LinkTo to='/'>
-                <img src={logo} width='80px' alt="logo" />
+                <img loading='lazy' src={logo} width='80px' alt="logo" />
                 </LinkTo>
                 <h2>VIDEOGAMES</h2>
                 <div className={styles.navsub}>

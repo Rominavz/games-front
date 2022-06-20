@@ -146,7 +146,7 @@ export default function Form() {
             </Top>
             <div>
                     <InfoImg>
-                        <img
+                        <img loading='lazy'
                         src={ game.image
                               ? game.image
                               : "https://cdn.pixabay.com/photo/2020/11/07/13/05/character-5720913_960_720.png"
